@@ -11,13 +11,14 @@ import managementRoute from './routes/managementRoute.js'
 import salesRoute from './routes/salesRoute.js'
 import Transaction from './models/Transaction.js'
 import OverAllStat from './models/OverAllStat.js'
+import AffiliateStat from './models/AffiliateStat.js'
 
 // data import
 // import Users from './models/User.js'
 // import { dataUser } from './data/index.js'
 //import Product from './models/Product.js'
 import ProductStat from './models/ProductStat.js'
-import {dataProduct, dataProductStat, dataTransaction, dataOverallStat} from './data/index.js'
+import {dataProduct, dataProductStat, dataTransaction, dataOverallStat, dataAffiliateStat} from './data/index.js'
 
 
 // Configurations
@@ -51,6 +52,7 @@ mongoose.connect(process.env.MONGO_URL,{
    //ProductStat.insertMany(dataProductStat)
    // Transaction.insertMany(dataTransaction)
     // OverAllStat.insertMany(dataOverallStat)
+    //AffiliateStat.insertMany(dataAffiliateStat)
 }).catch(err=>{
     console.log('Error', err)
 })
